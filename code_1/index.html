@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Drink Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Megrim" href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+     <!--Firebase Link + CDN-->
+     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>  
+
+    <!--^^added that-->
+     
+</head>
+
+<body>
+
+<!--linkies to js-->
+<script src="firebase.js"></script> 
+<script src="login.js"></script>
+ 
+
+<div id="firebaseui-auth-container"></div>
+<div id="loader">Loading...</div>
+
+<!-- ^^ I added these ^^-->
+
+  <div class="signup-block">
+    <div class="jumbotron">
+        <div class="app-header">
+            App Name
+        </div>
+      </div>
+    <div class="row">
+      <form>
+              <div class="form-group">
+                <label for="name-input">Name</label>
+                <input class="form-control form-control-sm" id="name-input" placeholder="Last, First" type="text">
+              </div>
+              <div class="form-group">
+                <label for="weight-input">Weight (lbs.)</label>
+                <input class="form-control form-control-sm" id="weight-input" placeholder="0.0" type="text">
+              </div>
+              <div class="form-group">
+                <label for="phone-input">Sober Contact</label>
+                <input class="form-control form-control-sm" id="phone-input" placeholder="(212) 888-0000" type="text">
+              </div>
+              <div class="form-group">
+                <label for="exampleSelect1">Sex</label>
+                <select class="form-control form-control-sm" id="sexSelect">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="user-email-input">Username (User Email)</label>
+                <input class="form-control form-control-sm" id="user-email-input" placeholder="Username" type="email">
+              </div>
+              <div class="form-group">
+                <label for="email-input">Password</label>
+                <input class="form-control form-control-sm" id="password-input" placeholder="Password" type="password">
+              </div>
+              <button class="btn btn-primary float-right" id="add-user-btn">
+                Sign Up
+              </button> 
+      </form>
+    </div>
+    <br>
+    <div class="login-block">
+    <div class="row">
+      <form>
+              <div class="form-group">
+                <label for="email-input">Username</label>
+                <input class="form-control form-control-sm" id="user-input" placeholder="Username" type="text">
+              </div>
+              <div class="form-group">
+                <label for="email-input">Password</label>
+                <input class="form-control form-control-sm" id="password-input" placeholder="Password" type="password">
+              </div>
+              <button class="btn btn-primary float-right" id="login-btn">
+                Login
+              </button> 
+      </form>
+    </div>
+    <br>
+    <div class="homepage-block">
+    <div class="row">
+      <form>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Timer</title>
+  <link rel="stylesheet" href="./style.css">
+  
+  <!--Firebase Link-->
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+</head>
+<body>
+  <!--link-->
+  <script src="main.js"></script>
+  <script srs="login.js"></script>
+  <script srs="firebase.js"></script>
+  <!--/link-->
+  
+  <div class="form">
+    <!--I changed placeholder names temporarily-->
+    <input type="text" id="userName" placeholder="user@email.com">
+    <input type="text" id="weight" placeholder="weight (lb)">
+    <input type="text" id="userPN" placeholder="user (___) ___-____">
+    <input type="text" id="helpPN" placeholder="emergency (___) ___-____">
+    <select id="gender">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    <!--Added Logout Button-->
+    <button type="button" id="submit">Submit</button> <button onclick="firebaseApp.logOut()">Logout</button> 
+    <p id="firstMessage"></p>
+  </div>
+  <div id="drinksField">
+    <button type="button" name="button" id="deleteLS">Delete Data</button>
+    <p id="text"></p>
+    <div class="drinks">
+      <button type="button" name="button" id="beer">Beer</button>
+      <button type="button" name="button" id="wine">Wine</button>
+      <button type="button" name="button" id="shot">Shot</button>
+      <button type="button" name="button"id="cocktail">Cocktail</button>
+    </div>
+    <div>
+      <p id="bac" class="green">BAC level: <span id="bacLevel">0</span></p>
+      <p id="textPhoneNumber"></p>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Drink</th>
+            <th>Number</th>
+            <th>Last time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="beerRow"></tr>
+          <tr id="wineRow"></tr>
+          <tr id="shotRow"></tr>
+          <tr id="cocktailRow"></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="./logic.js"></script>
+</body>
+</html>
